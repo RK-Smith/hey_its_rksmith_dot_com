@@ -1,0 +1,386 @@
+<!-- This site is best viewed with HypnOS™ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A constantly evolving webspace intended to be a digital reflection of my thoughts and ideas, as well as a place to archive personal projects and fart jokes.">
+    <title>Hey! It's R.K. Smith!</title>
+    <link href="index.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+   
+<script type="text/javascript">
+// <![CDATA[
+var speed=90; // speed of wobbling, lower is faster
+var height=2; // height of wobbling in pixels
+var alink=""; // page to link text to (set to ="" for no link)
+
+/****************************
+*    Wobbly Text Effect     *
+*(c) 2003-6 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var wobtxt, wobble, wobcnt=0;
+window.onload=function() { if (document.getElementById) {
+  var i, wobli;
+  wobble=document.getElementById("wobble");
+  wobtxt=wobble.firstChild.nodeValue;
+  while (wobble.childNodes.length) wobble.removeChild(wobble.childNodes[0]);
+  for (i=0; i<wobtxt.length; i++) {
+    wobli=document.createElement("span");
+    wobli.setAttribute("id", "wobb"+i);
+    wobli.style.position="relative";
+    wobli.appendChild(document.createTextNode(wobtxt.charAt(i)));
+    if (alink) {
+      wobli.style.cursor="pointer";
+      wobli.onclick=function() { top.location.href=alink; }
+    }
+    wobble.appendChild(wobli);
+  }
+  setInterval("wobbler()", speed);
+}}
+
+function wobbler() {
+  for (var i=0; i<wobtxt.length; i++) document.getElementById("wobb"+i).style.top=Math.round(height*Math.sin(i+wobcnt))+"px"
+  wobcnt++;
+}
+// ]]>
+</script>
+
+<script type="text/javascript">
+// <![CDATA[
+var news=Array(" dir /w");
+var cursor="_"; // set cursor
+var delay=8; // seconds between each news item
+
+/***************************\
+* News Ticker Text Effect   *
+*(c)2004-14 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+var newsp, cursp, flash, item=0;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(teleprint);
+
+function teleprint () { if (document.getElementById) {
+  var span=document.getElementById("news");
+  while (span.childNodes.length) span.removeChild(span.childNodes[0]);
+  delay*=1000;
+  newsp=document.createElement("span");
+  cursp=document.createElement("span");
+  cursp.appendChild(document.createTextNode(String.fromCharCode( )+cursor));
+  span.appendChild(newsp);
+  span.appendChild(cursp);
+  ticker();
+}}
+
+function ticker() {
+  var i;
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[item].substring(0,1)));
+  for (i=1; i<news[item].length; i++) setTimeout('newsp.firstChild.nodeValue="'+news[item].substring(0, i+1)+'"', 100*i);
+  if (news[item].indexOf("www")!=-1) setTimeout('linkit('+item+')', 100*i);
+  setTimeout('flash=setInterval("cursp.style.visibility=(cursp.style.visibility==\'visible\')?\'hidden\':\'visible\'", 120)', 100*i)
+  setTimeout('clearInterval(flash)', delay);
+  setTimeout('cursp.style.visibility="visible"', delay);
+  setTimeout('ticker()', delay);
+  item=++item%news.length;
+}
+
+function linkit(q) {
+  var a,p,e,l;
+  p=news[q].indexOf("www");
+  e=news[q].indexOf("", p);
+  if (e==-1) e=news[q].length;
+  l=news[q].substring(p, e);
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[q].substring(0, p)));
+  a=document.createElement("a");
+  a.href="http://"+l;
+  a.appendChild(document.createTextNode(l));
+  newsp.appendChild(a);
+  newsp.appendChild(document.createTextNode(news[q].substring(e)));
+}
+// ]]>
+</script>
+</head>
+
+<body>
+
+<div class="page_block" id="main">
+  <center>
+  <script type="text/javascript">
+//Javascript Created by Computerhope https://www.computerhope.com/
+//store the quotations in arrays
+var images = [],
+index = 0;
+images[0] = "<img align='center' src='header/1.gif'>";
+images[1] = "<img align='center' src='header/2.gif'>";
+images[2] = "<img align='center' src='header/3.gif'>";
+images[3] = "<img align='center' src='header/4.gif'>";
+images[4] = "<img align='center' src='header/5.gif'>";
+images[5] = "<img align='center' src='header/6.gif'>";
+images[6] = "<img align='center' src='header/7.gif'>";
+images[7] = "<img align='center' src='header/8.gif'>";
+images[8] = "<img align='center' src='header/9.gif'>";
+images[9] = "<img align='center' src='header/10.gif'>";
+images[10] = "<img align='center' src='header/11.gif'>";
+images[11] = "<img align='center' src='header/12.gif'>";
+images[12] = "<img align='center' src='header/13.gif'>";
+images[13] = "<img align='center' src='header/14.gif'>";
+images[14] = "<img align='center' src='header/15.gif'>";
+images[15] = "<img align='center' src='header/16.gif'>";
+images[16] = "<img align='center' src='header/17.gif'>";
+index = Math.floor(Math.random() * images.length);
+document.write(images[index]);
+//done
+</script> 
+    <img align="center" width="575px" src="index_files/index_logo.gif">
+  </center>
+</div>
+
+<nav class="page_block" id="menu">
+  <div>
+    <a href="#about"><img src="index_files/button_about.png"></a> <a href="#zine"><img src="index_files/button_zine.png"></a> <a href="#games"><img src="index_files/button_games.png"></a> <a href="#music"><img src="index_files/button_music.png"></a> <a href="#misc"><img src="index_files/button_misc.png"></a> <a href="#links"><img src="index_files/button_links.png"></a> <a href="/sitemap"><img src="index_files/button_sitemap.png"></a>
+  </div>
+</nav>
+
+<div class="page_block" id="about">
+  <center><img src="index_files/about_doodle.gif"></center>
+  <div>
+    <p>
+    Hey! Welcome to my website!<br>
+    My "artist" handle is R.K.&nbsp;Smith,<br>
+    kinda like M.C.&nbsp;Escher or R.L.&nbsp;Stein,<br>
+    but all my friends call me Kalyn :)
+    </p>
+    <p>
+    I'm a fem non-binary who likes<br>
+    making stuff, and this website is<br>
+    my attempt at organizing all of the<br>
+    hobbies and ideas bumbling around<br>
+    in my brain into a (hopefully) easy<br>
+    to digest format that helps me<br>
+    keep everything straight.<br>
+    </p>
+  </div>
+</div>
+
+<div class="page_block" id="zine">
+  <center>
+    <p><img src="index_files/zine_logo.gif"></p>
+  </center>
+  <div id="zinebody">
+  <center>
+    <p><img src="index_files/latest_updates.gif"></p>
+    <b><img src="index_files/new.gif"><a href="zine/articles/0001">NOV 5 2022 - VCFMW 17 Trip Report!</a></b>
+    <p><img width="640px" src="index_files/skull_banner.gif"></p>
+    <p>(LINK TO ARCHIVES WILL GO HERE ONCE ONE IS ACTAULLY NEEDED)</p>
+  </center>
+  </div>
+  <br>
+</div>
+
+<div class="page_block" id="games">
+  <div><center><img src="index_files/energy_star.png"></center></div>
+    <br>
+    <p>
+    PENTEEUM&nbsp;III&nbsp;CPU&nbsp;at&nbsp;1B&nbsp;GHz<br>
+    CPU&nbsp;ID:&nbsp;&nbsp;012090K<br>
+    PATCH&nbsp;ID:&nbsp;&nbsp;091991J<br>
+    Memory&nbsp;Test:&nbsp;&nbsp;65536k&nbsp;OK<br>
+    </p>
+    <br><br><br>
+    <h3>C:\GAMES><span id="news"> dir /w</span></h3>
+    <h3>Directory of C:\GAMES\.</h3>
+    <h3>[&nbsp;coming&nbsp;soon...&nbsp;]</h3>
+    <br><br><br>
+</div>
+
+<div class="page_block" id="music">
+  <center>
+    <h1><div id="wobble">MUSIC N TUNEZ</div></h1>
+    <p>Some of my favorite bands:</p>
+    <p><a href="music/devo"><img src="index_files/devo_logo.gif"></a><a href="music/gizz"><img src="index_files/kinggizz_logo.gif"></a><img src="index_files/tobacco_logo.gif"></p>
+    <br>
+    <p><img src="index_files/construction.gif"></p>
+    <p><b>more coming soon...</b></p>
+  </center>
+</div>
+
+<div class="page_block" id="misc">
+  <center>
+    <p><img width="200px" src="index_files/misc.png"></p>
+    <p>All the other stuff I make or do that doesn't easily fit into the other categories</p>
+    <a target="_blank" rel="noopener noreferrer"  href="mac_se"><img src="index_files/mac_se_icon.gif"></a>
+    <a href="floppy_art"><img src="index_files/floppy_art_logo.gif"></a>
+    <p><img border="5px solid #ffe3e9" width="500px" src="index_files/cool_guy.gif"></p>
+  </center>
+</div>
+
+<div class="page_block" id="links">
+  <center>
+    <p><img align="center" src="index_files/links.gif"></p>
+    <p>
+    The links below are of the utmost quality and have all gone through our patently exhaustive inspection process before being approved, so click with confidence!
+    </p>
+    <img width="100%" src="index_files/rainbow_bar.gif">
+    <p>
+    <a href="https://neocities.org/site/rksmith"><img src="banners/neocities_link.gif"></a>
+    <a href="https://twitter.com/RKSmiff/"><img src="banners/twitter_link.gif"></a>
+    <a href="https://www.instagram.com/rksmiff/"><img src="banners/instagram_link.gif"></a>
+    </p>
+    <p>
+    <a href="https://neo-neighborhoods.neocities.org/SoHo/"><img width="100px" height="35px" title="Neocities Neighborhoods" src="banners/soho.gif"></a>
+    <a href="https://msx.gay/buttons.htm#"><img width="100px" height="35px" title="Made With Non-Binary Pride!" src="banners/nb.gif"></a>
+    <a href="https://neo-neighborhoods.neocities.org/Heartland/Bluffs/4157/hampdance.html"><img width="100px" height="35px" title="The Hampster Dance" src="banners/hampster_dance.png"></a>
+    <a href="https://www.ifpapinball.com/"><img width="100px" height="35px" title="International Flipper Pinball Association" src="banners/ifpa.gif"></a>
+    <a href="https://www.youtube.com/watch?v=5PDuqk_DSMw"><img width="100px" height="35px" title="Joe Pesci with His Head On Fire" src="banners/headonfire.gif"></a>
+    <a href="https://32bit.cafe/"><img width="100px" height="35px" title="32 BIT CAFE" src="banners/32bit.png"></a>
+    <a href="https://www.vgmusic.com/"><img width="100px" height="35px" title="Video Game Music Archive" src="banners/vgma.png"></a>
+    <a href="https://dannarchy.com/"><img width="100px" height="35px" title="DANNARCHY" src="banners/d_now.gif"></a>
+    <a href="https://www.youtube.com/watch?v=4aGDCE6Nrz0"><img width="100px" height="35px" title="T H E  F U N  C A N N O T  B E  H A L T E D" src="banners/cube.gif"></a>
+    <a href="https://mega64.com/"><img width="100px" height="35px" title="Mega64" src="banners/mega64.png"></a>
+    <a href="https://homestarrunner.com/"><img width="100px" height="35px" title="Homestar Runner" src="banners/homestar.png"></a>
+    <a href="https://www.albinoblacksheep.com"><img width="100px" height="35px" title="Albino Blacksheep" src="banners/abs.gif"></a>
+    <a href="https://www.newgrounds.com/"><img width="100px" height="35px" title="Everything, By Everyone" src="banners/newgrounds.gif"></a>
+    <a href="https://www.youtube.com/watch?v=QOOXRD1LanI"><img width="100px" height="35px" title="Classics Of Game 019" src="banners/whatsgoingonhere.gif"></a>
+    <a href="https://www.youtube.com/c/Lazygamereviews"><img width="100px" height="35px" title="Lazy Game Reviews" src="banners/lgr.gif"></a>
+    <a href="https://www.youtube.com/watch?v=klGRVTTntoI"><img width="100px" height="35px" title="The cream always rises to the top..." src="banners/randysavage.gif"></a>
+    <a href="https://www.youtube.com/watch?v=ha7smLPz2GY"><img width="100px" height="35px" title="WHO ARE YOU?" src="banners/trumpetfight.gif"></a>
+    <a href="https://teomodo.neocities.org/"><img width="100px" height="35px" title="TEOMODO" src="banners/teomodo.gif"></a>
+    <a href="https://space-bar.neocities.org/"><img width="100px" height="35px" title="SPACE-BAR" src="banners/spacebar.jpg"></a>
+    <a href="https://www.sega.com/"><img width="100px" height="35px" title="SEGA Online" src="banners/sega_online.gif"></a>
+    <a href="https://www.youtube.com/watch?v=VWgwJfbeCeU"><img width="100px" height="35px" title="w-w-w full stop butterfield-diet full stop c-o-m" src="banners/butterfield.gif"></a>
+    <a href="https://www.kingdomofloathing.com"><img width="100px" height="35px" title="The Kingdom of Loathing" src="banners/kol.gif"></a>
+    <a href="https://liminal.photos/"><img width="100px" height="35px" title="Liminal Photos" src="banners/liminalbanner.jpg"></a>
+    <a href="https://www.theonion.com/"><img width="100px" height="35px" title="The Onion" src="banners/onionlink1098.gif"></a>
+    <a href="https://www.youtube.com/watch?v=iRZ2Sh5-XuM"><img width="100px" height="35px" title="going to the store" src="banners/goingtothestore.gif"></a>
+    <a href="http://www.mf2fm.com/rv/"><img width="100px" height="35px" title="mf2fm.com" src="banners/mf2fm.gif"></a>
+    <a href="https://ussexcelsiorbbs.com/"><img width="100px" height="35px" title="U.S.S Excelsior" src="banners/excelsior_button.gif"></a>
+    <a href="https://humanfinny.neocities.org/"><img width="100px" height="35px" title="the human finny" src="banners/humanfinny.gif"></a>
+    <a href="https://pizzza.neocities.org/"><img width="100px" height="35px" title="P I Z Z Z A" src="banners/pizzza.gif"></a>
+    <a href="https://kingposs.com/"><img width="100px" height="35px" title="The Possum Den" src="banners/kingposs.gif"></a>
+    <a href="https://ollys-site.neocities.org/"><img width="100px" height="35px" title="olly" src="banners/olly_button.png"></a>
+    <a href="https://www.youtube.com/watch?v=r9B7BQWnZJs"><img width="100px" height="35px" title="Seashells by the Seashorpheous" src="banners/morpheus_buress.gif"></a>
+    <a href="https://www.korg.com"><img width="100px" height="35px" title="KORG" src="banners/korg.gif"></a>
+    <a href="https://www.youtube.com/watch?v=nmcuoaqdJ9w"><img width="100px" height="35px" title="Yankovic Now! 3.0" src="banners/yanknow.gif"></a>
+    <a href="https://itsnotstupid.com/"><img width="100px" height="35px" title="It's Not Stupid, It's Advanced!" src="banners/zim_button.gif"></a>
+    <a href="https://www.mamedev.org/"><img width="100px" height="35px" title="M.A.M.E." src="banners/mame.gif"></a>
+    <a href="https://sadgrl.online/"><img width="100px" height="35px" title="sadgrl.online" src="banners/sadgrl.gif"></a>
+    <a href="https://archive.org/"><img width="100px" height="35px" title="Internet Archive" src="banners/internetarchive.gif"></a>
+    <a href="https://pikitunch.neocities.org/"><img width="100px" height="35px" title="Ride The PikiTunch Wave" src="banners/tiki.gif"></a>
+    <a href="https://www.youtube.com/watch?v=3bYRCTS7eBU"><img width="100px" height="35px" title="HUURGH! SNIP SNAP! URRGH! OH-OH!" src="banners/german_skeleton.gif"></a>
+    <a href="https://auzziejay.com/"><img width="100px" height="35px" title="Auzzie Jay!" src="banners/auzzie.gif"></a>
+    <a href="https://www.youtube.com/watch?v=qyUnSuYYs18"><img width="100px" height="35px" title="Is it hot in here, or am I sweating?" src="banners/braknow.gif"></a>
+    <a href="https://www.hypnospace.net/"><img width="100px" height="35px" title="GO AHEAD 'ENFORCERS' - DO YOUR WORST!!!" src="banners/gooper.png"></a>
+    <a href="https://msx.gay/"><img width="100px" height="35px" title="msx.gay" src="banners/msx.gif"></a>
+    <a href="https://www.youtube.com/watch?v=8YDpvMYk5jA"><img width="100px" height="35px" title="You have no good ideas, Paul." src="banners/focusgroup.gif"></a>
+    <a href="https://www.youtube.com/watch?v=FdWPHiI2sDk"><img width="100px" height="35px" title="Soopa Mahhhrio~" src="banners/supermario.gif"></a>
+    <a href="https://daximus.site"><img width="100px" height="35px" title="Daximus" src="banners/dax_alien.gif"></a>
+    <a href="https://whitedesert.neocities.org/"><img width="100px" height="35px" title="WHITEDESERT" src="banners/whitedesert.png"></a>
+    <a href="https://www.redlettermedia.com/"><img width="100px" height="35px" title="Red Letter Media" src="banners/rlm.gif"></a>
+    <a href="http://longmontpotioncastle.com/"><img width="100px" height="35px" title="Y'all sell wigs down there?" src="banners/lpc.gif"></a>
+    <a href="https://melonking.net"><img width="100px" height="35px" title="Melon's House" src="banners/melon.gif"></a>
+    <a href="https://www.youtube.com/watch?v=ynQsDFxTSU4"><img width="100px" height="35px" title="No refunds..." src="banners/super_ghostbusters.gif"></a>
+    <a href="https://www.youtube.com/watch?v=BI-aDjb2sAA"><img width="100px" height="35px" title="DUANE!!!" src="banners/duane.gif"></a>
+    <a href="https://time-travelling-birb.neocities.org/"><img width="100px" height="35px" title="Time Travelling Birb" src="banners/ttb.gif"></a>
+    <a href="https://zombo.com/"><img width="100px" height="35px" title="ZOMBO" src="banners/zombo.png"></a>
+    <a href="https://www.youtube.com/watch?v=58OabCRCx_Q"><img width="100px" height="35px" title="wise words from the saad" src="banners/saad.gif"></a>
+    <a href="https://geno7.neocities.org"><img width="100px" height="35px" title="Geno7's Cool Webpage!" src="banners/geno7.gif"></a>
+    <a href="https://voodu.xyz/"><img width="100px" height="35px" title="VOODU.XYZ" SRC="banners/voodu.gif"></a>
+    <a href="https://www.youtube.com/watch?v=rKdtO2HWWoc"><img width="100px" height="35px" title="Believe in yourself and do A N Y T H I N G" src="banners/remlezar.gif"></a>
+    <a href="https://roborockett.neocities.org/"><img width="100px" height="35px" title="Jaime's Website" src="banners/roborockett.gif"></a>
+    <a href="https://webpage1990colourised.neocities.org/"><img width="100px" height="35px" title="Webpage 1990 Colourised" src="banners/webpage_1990.gif"></a>
+    <a href="https://www.youtube.com/watch?v=LZgeIReY04c"><img width="100px" height="35px" title="Oh cool! Can you download the Foo Fighters?" src="banners/never_download.gif"></a>
+    <a href="https://keysklubhouse.gay/"><img width="100px" height="35px" title="Key's Klubhouse" src="banners/kklink.gif"></a>
+    <a href="https://timecube.2enp.com/"><img width="100px" height="35px" title="Time Cube" src="banners/timecube.gif"></a>
+    <a href="https://www.youtube.com/watch?v=wIsyzeMD2Ak"><img width="100px" height="35px" title="MOON HOAX" src="banners/moonhoax.gif"></a>
+    <a href="https://warpzone.site/"><img width="100px" height="35px" title="W A R P Z O N E" src="banners/warpzone.gif"></a>
+    <a href="https://windows-99.neocities.org/"><img width="100px" height="35px" title="Windows 99" src="banners/windows99.png"></a>
+    </p>
+    <p>Here's my button if you wanna link back to me:</p>
+    <p><img align="center" src="index_files/arrow1.gif">&nbsp;<img width="100px" height="35px" align="center" src="banners/rksmith_banner.gif">&nbsp;<img align="center" src="index_files/arrow2.gif"></p>
+    <img width="100%" src="index_files/rainbow_bar.gif">
+    <p>
+    <img src="index_files/technicians.gif">
+    </p>
+    <span style="font-size:14px">
+    (Actual photos of our certified Hypertext Technicians™ working hard to make sure all your links are up to snuff)
+    </span>
+    <br><br>
+  </center>
+</div>
+
+<div class="page_block" id="footer">
+  <center>
+    <span style="font-weight:normal">Proud Citizen of the</span>
+    <br><br>
+    <img width="100px" src="index_files/worldwideweb_badge.gif">
+    <br><br><br>
+    
+You are visitor # <span id="hitcount"></span>
+<br>
+Congrats on having such good taste!
+<br><br>
+Last Site Update: <span id="lastupdate"></span>
+
+<script>
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("hitcount").innerHTML = this.responseText;
+      var site_data = JSON.parse(this.responseText);
+      var num_arr = site_data.info.hits.toString().split("");
+      var num_img = "";
+      for (i = 0; i < num_arr.length; i++) {
+        num_img += `<img src="images/c` + num_arr[i] + `.gif"/>`;
+        if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_img += ",";}
+      }
+      document.getElementById("hitcount").innerHTML = num_img;
+      var date_obj = new Date(site_data.info.last_updated);
+      var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      document.getElementById("lastupdate").innerHTML = days[date_obj.getDay()] + " " + months[date_obj.getMonth()] + " " + date_obj.getDate() + ", " + date_obj.getFullYear();
+    }
+  };
+  xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=rksmith", true);
+  xhttp.send();
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var site_data = JSON.parse(this.responseText);
+      var num_arr = site_data.info.views.toString().split("");
+      var num_str = "";
+      for (i = 0; i < num_arr.length; i++) {
+        num_str += `<img src="counter/c` + num_arr[i] + `.png"/>`;
+        if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+      }
+      document.getElementById("hitcount").innerHTML = num_str;
+    }
+  };
+  xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=rksmith", true);
+  xhttp.send();
+</script>
+
+<br><br>
+<a href="#main"><img src="index_files/back2top.gif"></a>
+<br><br>
+    <span style="font-size:12px;font-weight:normal">© 2023 R.K. Smith</span>
+  </center>
+</div>
+
+</body>
+</html>

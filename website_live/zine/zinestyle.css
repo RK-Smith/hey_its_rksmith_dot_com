@@ -1,0 +1,67 @@
+body {
+    color: black;
+	background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width:100%;
+}
+	
+a:link {
+    color: #000000; 
+    background-color: transparent;
+    text-decoration: underline;
+}
+	
+a:visited {
+    color: #000000; 
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #000000; 
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+p.indent {
+    text-indent: 16px;
+}
+
+#zine {
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    color: #000000;
+    padding: 2px;
+}
+#zinebody {
+    display: block;
+    border-radius: 20px;
+    background-color: #9258b8F7;
+	font-family: Arial, sans-serif;
+    margin: auto;
+	line-height: 1.5;
+}
+@media only screen and (min-width: 1101px) {
+#zinebody {
+    width: 55%;
+    padding: 20px;
+	font-size: 17px;
+}
+}
+@media only screen and (max-width: 1100px) {
+#zinebody {
+    width: 70%;
+    padding: 14px;
+    font-size: 14px;
+}
+}
+@media only screen and (max-width: 800px) {
+#zinebody {
+    width: 90%;
+    padding: 12px;
+    font-size: 12px;
+}
+}

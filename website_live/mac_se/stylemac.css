@@ -1,0 +1,62 @@
+body {
+  background-image: url('img/mac_greybg.gif');
+  background-color: #ffffff;
+  image-rendering: crisp-edges;
+}
+	
+h1 {
+  color: #000000;
+  font-family: MAC;
+  font-size: 180%;
+}
+	
+h1 span {
+  background: white;
+  padding: 4px 10px;
+}
+
+p {
+  font-family: MAC_LITE;
+  color: #000000;
+  font-size: 180%;
+}
+
+p span {
+  background: white;
+  padding: 4px 10px;
+}
+	
+@font-face {
+  font-family: MAC;
+	src: url(../fonts/mac_chicago.ttf);
+}
+	
+@font-face {
+	font-family: MAC_LITE;
+	src: url(../fonts/mac_chicago_lite.ttf);
+}
+	
+img {
+  max-width:90%;
+  height: auto;
+}
+
+a img, :link img, :visited img {
+  border: 0px;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+a:active {
+  color: black;
+} 

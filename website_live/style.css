@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Verdana;
+}
+
+img {
+    max-width:90%;
+}
+
+a:link {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+}
+	
+a:visited {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: underline;
+}

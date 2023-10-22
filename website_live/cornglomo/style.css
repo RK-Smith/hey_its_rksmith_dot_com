@@ -1,0 +1,37 @@
+body {
+  background-image: url("/cornglomo/cornglomo_files/main_bg.gif");
+  background-color: #555555;
+  }
+img {
+  max-width:100%;
+  }
+a:link {
+  color: #aaaaaa;
+  background-color: transparent;
+  text-decoration: none;
+	}
+a:visited {
+  color: #aaaaaa;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #8afa6f;
+  background-color: transparent;
+  text-decoration: underline;
+}
+table {
+  padding: 8px;
+  border-spacing: 4px;
+  background-color: #525cf6;
+  }
+th {
+  color:#ffffff;
+  background-color: #555555;
+  background-image: url(/cornglomo/cornglomo_files/header_bg.jpg)
+  }
+td {
+  color:#aaaaaa;
+  padding: 18px;
+  background-color: #000000;
+  }

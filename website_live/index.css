@@ -1,0 +1,196 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Verdana;
+    
+}
+
+img {
+    max-width:100%;
+}
+@font-face {
+  font-family: DOS;
+  src: url(fonts/dos.woff);
+}
+
+@font-face {
+  font-family: RKS;
+  src: url(fonts/rk_smith.ttf);
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+	
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e0abf5;
+    background-color: transparent;
+    text-decoration: underline;
+}
+#main {
+    background-image:url('index_files/bg_static.gif');
+    background-attachment: fixed;
+    border-bottom: thick double #8a00c2;
+    padding:25px;
+}
+
+#menu {
+    background-image:url('index_files/bg_marble.png');
+    padding:16px;
+    border-top: thick double #8a00c2;
+    border-bottom: thick double #8a00c2;
+    text-align: center;
+    letter-spacing: 20px;
+}
+#menu > div {
+    line-height: 30px;
+    letter-spacing: 20px;
+    text-align: center;
+}
+
+#about {
+    font-family: 'RKS';
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-image:url('index_files/bg_paper.gif');
+    border-top: thick double #8a00c2;
+    border-bottom: thick double #af22b1;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+#about > div {
+    color: #27292b;
+    text-shadow: 1px 1px #ffffff, -1px -1px #ffffff, -1px 1px #ffffff, 1px -1px #ffffff;
+    text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  #about {
+    line-height: 36px;
+    padding-left:160px;
+    padding-right: 18px;
+    font-size: 22px;
+}
+
+  #about img {
+    float: right;
+}
+}
+@media only screen and (max-width: 599px) {
+  #about {
+    font-size: 14px;
+    line-height: 24px;
+    padding-left:40px;
+}
+}
+@media only screen and (max-width: 1110px) {
+  #about {
+    line-height: 34px;
+    padding-left:50px;
+}
+  #about img {
+    float: none;
+}
+}
+
+#zine {
+    background-image: url('index_files/bg_xerox.gif');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    color: #000000;
+    border-top: thick double #af22b1;
+    border-bottom: thick double #20c20e;
+    padding: 15px;
+}
+#zinebody {
+    display: block;
+    border-radius:20px;
+    background-color:#9258b8B3;
+    margin: auto;
+}
+@media only screen and (min-width: 1101px) {
+#zinebody {
+    width: 55%;
+    padding: 15px;
+}
+}
+@media only screen and (max-width: 1100px) {
+#zinebody {
+    width: 70%;
+    padding: 12px;
+    font-size: 14px;
+}
+}
+@media only screen and (max-width: 800px) {
+#zinebody {
+    width: 90%;
+    padding: 12px;
+    font-size: 12px;
+}
+}
+
+#games {
+    background-image: url('index_files/bg_crt.gif');
+    background-color: #090e08;
+    font-family: 'DOS';
+    color: #e9f5ef;
+    font-size: 17px;
+    text-shadow: 0 0 20px #6e7873, 0 0 40px #6e7873;
+    border-top: thick double #20c20e;
+    border-bottom: thick double #62e3e6;
+    padding: 45px;
+    letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 760px) {
+#games > div {
+    float: right;
+}
+}
+
+#music {
+    color: #c4feff;
+    text-shadow: 1px 1px #000000, -1px -1px #000000, -1px 1px #000000, 1px -1px #000000;
+    background-image:url('index_files/bg_modular.gif');
+    border-top: thick double #62e3e6;
+    border-bottom: thick double #ff3d5d;
+    padding: 20px;
+}
+
+#misc {
+    background-image:url('index_files/bg_brick.png');
+    color: #ffe3e9;
+    text-shadow: 1px 1px #000000, -1px -1px #000000, -1px 1px #000000, 1px -1px #000000;
+    border-top: thick double #ff3d5d;
+    border-bottom: thick double #ec008d;
+    padding: 20px;
+}
+
+#links {
+    color: #FF10F0;
+    text-shadow: 1px 1px #000000, -1px -1px #000000, -1px 1px #000000, 1px -1px #000000;
+    background-image:url('index_files/bg_twinkle.gif');
+    border-top: thick double #ec008d;
+    border-bottom: thick double #0000FF;
+    padding: 20px;
+}
+
+#footer {
+    background-image:url('index_files/bg_rivets.png');
+    color: #ead020;
+    font-weight: bold;
+    text-shadow: 1px 1px #000000, -1px -1px #000000, -1px 1px #000000, 1px -1px #000000;
+    padding:36px;
+    border-top: thick double #0000FF;
+    text-align: center;
+}
